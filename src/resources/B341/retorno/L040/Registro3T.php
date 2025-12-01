@@ -1,6 +1,6 @@
 <?php
 /*
- * CnabPHP - Geração de arquivos de remessa e retorno em PHP
+ * CnabPHP - Gerao de arquivos de remessa e retorno em PHP
  *
  * LICENSE: The MIT License (MIT)
  *
@@ -67,7 +67,7 @@ class Registro3T extends Generico3
 			'tipo'=>'int',
 			'required'=>true),
 			
-		// - ------------------ até aqui é igual para todo registro tipo 3
+		// - ------------------ at aqui  igual para todo registro tipo 3
 
         'filler1'=>array(               // 11.3P
             'tamanho'=>1,
@@ -225,11 +225,11 @@ class Registro3T extends Generico3
 		$this->inserirDetalhe($data);
 	}
 	public function inserirDetalhe($data)
-	{
-		$class = 'CnabPHP\resources\\'.RetornoAbstract::$banco.'\remessa\\'.RetornoAbstract::$layout.'\Registro3U';
-		$this->children[] = new $class($data);
-		RetornoAbstract::$linesCounter++;
-	}    
+    {
+        $class = 'CnabPHP\resources\\B'.RetornoAbstract::$banco.'\retorno\\'.RetornoAbstract::$layout.'\Registro3U';
+        $this->children[] = new $class($data);
+        RetornoAbstract::$linesCounter++;
+    }    
 }
 
 ?>
